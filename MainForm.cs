@@ -2,6 +2,7 @@ using DarkThemeSyntax.Resources;
 using Sunny.UI;
 using Sunny.UI.Win32;
 using System.Xml.Serialization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace DarkThemeSyntax
 {
@@ -130,19 +131,22 @@ namespace DarkThemeSyntax
                 Color foreLighterColor = ColorHelper.MakeColorLighter(foreHexColor, Convert.ToInt32(colorPercentageTextBox.Text));
                 Color backLighterColor = ColorHelper.MakeColorLighter(backHexColor, Convert.ToInt32(colorPercentageTextBox.Text));
 
-
-                items.Add(new Item()
+                var itemToAdd = new Item()
                 {
                     Name = key,
                     OldColor = foreHexColor,
                     NewColor = foreLighterColor,
-                    IsBold = boolIsBold,
-                    Background = new Item()
+                    IsBold = boolIsBold
+                };
+                if (backHexColor != Color.Transparent)
+                {
+                    itemToAdd.Background = new Item()
                     {
                         NewColor = backLighterColor,
                         OldColor = backHexColor
-                    }
-                }); ;
+                    };
+                }
+                items.Add(itemToAdd); 
             }
             else
             {
