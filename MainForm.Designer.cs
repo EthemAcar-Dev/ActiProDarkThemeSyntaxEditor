@@ -38,7 +38,7 @@
             uiTitlePanel3 = new Sunny.UI.UITitlePanel();
             propertiesListBox = new Sunny.UI.UIListBox();
             uiTitlePanel4 = new Sunny.UI.UITitlePanel();
-            oldColorPicker = new Sunny.UI.UIPanel();
+            oldColorPanel = new Sunny.UI.UIPanel();
             newColorPicker = new Sunny.UI.UIColorPicker();
             uiLabel2 = new Sunny.UI.UILabel();
             uiLabel1 = new Sunny.UI.UILabel();
@@ -46,12 +46,18 @@
             uiTitlePanel2 = new Sunny.UI.UITitlePanel();
             generateColorsButton = new Sunny.UI.UIButton();
             uiLabel3 = new Sunny.UI.UILabel();
+            backgroundColorPanel = new Sunny.UI.UITitlePanel();
+            backgroundOldColorPanel = new Sunny.UI.UIPanel();
+            backgroundColorPicker = new Sunny.UI.UIColorPicker();
+            uiLabel4 = new Sunny.UI.UILabel();
+            uiLabel5 = new Sunny.UI.UILabel();
             fileDropPanel.SuspendLayout();
             uiTitlePanel1.SuspendLayout();
             colorPreviewPanel.SuspendLayout();
             uiTitlePanel3.SuspendLayout();
             uiTitlePanel4.SuspendLayout();
             uiTitlePanel2.SuspendLayout();
+            backgroundColorPanel.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -76,7 +82,7 @@
             fileDropPanel.Name = "fileDropPanel";
             fileDropPanel.RectColor = Color.FromArgb(18, 58, 92);
             fileDropPanel.ShowText = false;
-            fileDropPanel.Size = new Size(574, 270);
+            fileDropPanel.Size = new Size(604, 270);
             fileDropPanel.Style = Sunny.UI.UIStyle.Black;
             fileDropPanel.TabIndex = 1;
             fileDropPanel.Text = "Langdef file";
@@ -90,13 +96,13 @@
             uiTitlePanel1.FillColor2 = Color.FromArgb(24, 24, 24);
             uiTitlePanel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiTitlePanel1.ForeColor = Color.White;
-            uiTitlePanel1.Location = new Point(24, 781);
+            uiTitlePanel1.Location = new Point(24, 896);
             uiTitlePanel1.Margin = new Padding(4, 5, 4, 5);
             uiTitlePanel1.MinimumSize = new Size(1, 1);
             uiTitlePanel1.Name = "uiTitlePanel1";
             uiTitlePanel1.RectColor = Color.FromArgb(18, 58, 92);
             uiTitlePanel1.ShowText = false;
-            uiTitlePanel1.Size = new Size(987, 369);
+            uiTitlePanel1.Size = new Size(1017, 316);
             uiTitlePanel1.Style = Sunny.UI.UIStyle.Black;
             uiTitlePanel1.TabIndex = 3;
             uiTitlePanel1.Text = "VS Settings Result";
@@ -110,7 +116,7 @@
             exportTextBox.Dock = DockStyle.Bottom;
             exportTextBox.FillColor2 = Color.FromArgb(24, 24, 24);
             exportTextBox.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            exportTextBox.Location = new Point(0, 36);
+            exportTextBox.Location = new Point(0, 37);
             exportTextBox.Margin = new Padding(4, 5, 4, 5);
             exportTextBox.MinimumSize = new Size(1, 16);
             exportTextBox.Multiline = true;
@@ -121,7 +127,7 @@
             exportTextBox.ScrollBarColor = Color.FromArgb(24, 24, 24);
             exportTextBox.ShowScrollBar = true;
             exportTextBox.ShowText = false;
-            exportTextBox.Size = new Size(987, 333);
+            exportTextBox.Size = new Size(1017, 279);
             exportTextBox.Style = Sunny.UI.UIStyle.Black;
             exportTextBox.TabIndex = 4;
             exportTextBox.TextAlignment = ContentAlignment.MiddleLeft;
@@ -135,7 +141,7 @@
             colorPreviewPanel.FillColor2 = Color.FromArgb(24, 24, 24);
             colorPreviewPanel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             colorPreviewPanel.ForeColor = Color.White;
-            colorPreviewPanel.Location = new Point(606, 56);
+            colorPreviewPanel.Location = new Point(636, 56);
             colorPreviewPanel.Margin = new Padding(4, 5, 4, 5);
             colorPreviewPanel.MinimumSize = new Size(1, 1);
             colorPreviewPanel.Name = "colorPreviewPanel";
@@ -158,7 +164,7 @@
             previewNewLabel.Size = new Size(399, 34);
             previewNewLabel.Style = Sunny.UI.UIStyle.Black;
             previewNewLabel.TabIndex = 1;
-            previewNewLabel.Text = "Hello world color new!";
+            previewNewLabel.Text = "Hello world new color!";
             previewNewLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // previewOldLabel
@@ -187,7 +193,7 @@
             uiTitlePanel3.Name = "uiTitlePanel3";
             uiTitlePanel3.RectColor = Color.FromArgb(18, 58, 92);
             uiTitlePanel3.ShowText = false;
-            uiTitlePanel3.Size = new Size(574, 416);
+            uiTitlePanel3.Size = new Size(604, 416);
             uiTitlePanel3.Style = Sunny.UI.UIStyle.Black;
             uiTitlePanel3.TabIndex = 7;
             uiTitlePanel3.Text = "Properties";
@@ -199,7 +205,7 @@
             propertiesListBox.Dock = DockStyle.Bottom;
             propertiesListBox.FillColor = Color.FromArgb(24, 24, 24);
             propertiesListBox.FillColor2 = Color.FromArgb(24, 24, 24);
-            propertiesListBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            propertiesListBox.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             propertiesListBox.ForeColor = Color.White;
             propertiesListBox.HoverColor = Color.FromArgb(55, 55, 55);
             propertiesListBox.ItemSelectForeColor = Color.White;
@@ -212,7 +218,7 @@
             propertiesListBox.ScrollBarBackColor = Color.FromArgb(24, 24, 24);
             propertiesListBox.ScrollBarColor = Color.White;
             propertiesListBox.ShowText = false;
-            propertiesListBox.Size = new Size(574, 381);
+            propertiesListBox.Size = new Size(604, 381);
             propertiesListBox.Style = Sunny.UI.UIStyle.Black;
             propertiesListBox.TabIndex = 7;
             propertiesListBox.Text = "uiListBox1";
@@ -220,7 +226,7 @@
             // 
             // uiTitlePanel4
             // 
-            uiTitlePanel4.Controls.Add(oldColorPicker);
+            uiTitlePanel4.Controls.Add(oldColorPanel);
             uiTitlePanel4.Controls.Add(newColorPicker);
             uiTitlePanel4.Controls.Add(uiLabel2);
             uiTitlePanel4.Controls.Add(uiLabel1);
@@ -228,7 +234,7 @@
             uiTitlePanel4.FillColor2 = Color.FromArgb(24, 24, 24);
             uiTitlePanel4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiTitlePanel4.ForeColor = Color.White;
-            uiTitlePanel4.Location = new Point(606, 345);
+            uiTitlePanel4.Location = new Point(636, 345);
             uiTitlePanel4.Margin = new Padding(4, 5, 4, 5);
             uiTitlePanel4.MinimumSize = new Size(1, 1);
             uiTitlePanel4.Name = "uiTitlePanel4";
@@ -237,26 +243,26 @@
             uiTitlePanel4.Size = new Size(405, 175);
             uiTitlePanel4.Style = Sunny.UI.UIStyle.Black;
             uiTitlePanel4.TabIndex = 10;
-            uiTitlePanel4.Text = "Color Options";
+            uiTitlePanel4.Text = "Text Color Options";
             uiTitlePanel4.TextAlignment = ContentAlignment.MiddleCenter;
             uiTitlePanel4.TitleColor = Color.FromArgb(21, 21, 21);
             // 
-            // oldColorPicker
+            // oldColorPanel
             // 
-            oldColorPicker.FillColor = Color.FromArgb(24, 24, 24);
-            oldColorPicker.FillColor2 = Color.FromArgb(24, 24, 24);
-            oldColorPicker.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            oldColorPicker.ForeColor = Color.White;
-            oldColorPicker.Location = new Point(160, 54);
-            oldColorPicker.Margin = new Padding(4, 5, 4, 5);
-            oldColorPicker.MinimumSize = new Size(1, 1);
-            oldColorPicker.Name = "oldColorPicker";
-            oldColorPicker.RectColor = Color.FromArgb(18, 58, 92);
-            oldColorPicker.Size = new Size(236, 42);
-            oldColorPicker.Style = Sunny.UI.UIStyle.Black;
-            oldColorPicker.TabIndex = 4;
-            oldColorPicker.Text = null;
-            oldColorPicker.TextAlignment = ContentAlignment.MiddleCenter;
+            oldColorPanel.FillColor = Color.FromArgb(24, 24, 24);
+            oldColorPanel.FillColor2 = Color.FromArgb(24, 24, 24);
+            oldColorPanel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            oldColorPanel.ForeColor = Color.White;
+            oldColorPanel.Location = new Point(160, 54);
+            oldColorPanel.Margin = new Padding(4, 5, 4, 5);
+            oldColorPanel.MinimumSize = new Size(1, 1);
+            oldColorPanel.Name = "oldColorPanel";
+            oldColorPanel.RectColor = Color.FromArgb(18, 58, 92);
+            oldColorPanel.Size = new Size(236, 42);
+            oldColorPanel.Style = Sunny.UI.UIStyle.Black;
+            oldColorPanel.TabIndex = 4;
+            oldColorPanel.Text = null;
+            oldColorPanel.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // newColorPicker
             // 
@@ -307,7 +313,7 @@
             colorPercentageTextBox.FillColor = Color.White;
             colorPercentageTextBox.FillColor2 = Color.FromArgb(24, 24, 24);
             colorPercentageTextBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            colorPercentageTextBox.Location = new Point(290, 54);
+            colorPercentageTextBox.Location = new Point(282, 54);
             colorPercentageTextBox.Margin = new Padding(4, 5, 4, 5);
             colorPercentageTextBox.Maximum = 100D;
             colorPercentageTextBox.Minimum = 0D;
@@ -316,11 +322,11 @@
             colorPercentageTextBox.NumPadType = Sunny.UI.NumPadType.Integer;
             colorPercentageTextBox.Padding = new Padding(0, 0, 30, 2);
             colorPercentageTextBox.RectColor = Color.FromArgb(18, 58, 92);
-            colorPercentageTextBox.Size = new Size(92, 44);
+            colorPercentageTextBox.Size = new Size(105, 44);
             colorPercentageTextBox.Style = Sunny.UI.UIStyle.Black;
             colorPercentageTextBox.TabIndex = 11;
             colorPercentageTextBox.Text = "50";
-            colorPercentageTextBox.TextAlignment = ContentAlignment.MiddleLeft;
+            colorPercentageTextBox.TextAlignment = ContentAlignment.MiddleCenter;
             colorPercentageTextBox.Watermark = "";
             // 
             // uiTitlePanel2
@@ -332,13 +338,13 @@
             uiTitlePanel2.FillColor2 = Color.FromArgb(24, 24, 24);
             uiTitlePanel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiTitlePanel2.ForeColor = Color.White;
-            uiTitlePanel2.Location = new Point(606, 537);
+            uiTitlePanel2.Location = new Point(24, 771);
             uiTitlePanel2.Margin = new Padding(4, 5, 4, 5);
             uiTitlePanel2.MinimumSize = new Size(1, 1);
             uiTitlePanel2.Name = "uiTitlePanel2";
             uiTitlePanel2.RectColor = Color.FromArgb(18, 58, 92);
             uiTitlePanel2.ShowText = false;
-            uiTitlePanel2.Size = new Size(405, 224);
+            uiTitlePanel2.Size = new Size(604, 115);
             uiTitlePanel2.Style = Sunny.UI.UIStyle.Black;
             uiTitlePanel2.TabIndex = 12;
             uiTitlePanel2.Text = "Auto Generate colors";
@@ -348,10 +354,10 @@
             // generateColorsButton
             // 
             generateColorsButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            generateColorsButton.Location = new Point(183, 115);
+            generateColorsButton.Location = new Point(394, 54);
             generateColorsButton.MinimumSize = new Size(1, 1);
             generateColorsButton.Name = "generateColorsButton";
-            generateColorsButton.Size = new Size(199, 32);
+            generateColorsButton.Size = new Size(194, 44);
             generateColorsButton.Style = Sunny.UI.UIStyle.Black;
             generateColorsButton.TabIndex = 13;
             generateColorsButton.Text = "Generate colors";
@@ -360,21 +366,106 @@
             // 
             // uiLabel3
             // 
-            uiLabel3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            uiLabel3.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
             uiLabel3.ForeColor = Color.White;
             uiLabel3.Location = new Point(13, 57);
             uiLabel3.Name = "uiLabel3";
-            uiLabel3.Size = new Size(253, 34);
+            uiLabel3.Size = new Size(266, 34);
             uiLabel3.Style = Sunny.UI.UIStyle.Black;
             uiLabel3.TabIndex = 12;
             uiLabel3.Text = "Lighter shade percentage:";
             uiLabel3.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // backgroundColorPanel
+            // 
+            backgroundColorPanel.Controls.Add(backgroundOldColorPanel);
+            backgroundColorPanel.Controls.Add(backgroundColorPicker);
+            backgroundColorPanel.Controls.Add(uiLabel4);
+            backgroundColorPanel.Controls.Add(uiLabel5);
+            backgroundColorPanel.FillColor = Color.FromArgb(24, 24, 24);
+            backgroundColorPanel.FillColor2 = Color.FromArgb(24, 24, 24);
+            backgroundColorPanel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backgroundColorPanel.ForeColor = Color.White;
+            backgroundColorPanel.Location = new Point(636, 530);
+            backgroundColorPanel.Margin = new Padding(4, 5, 4, 5);
+            backgroundColorPanel.MinimumSize = new Size(1, 1);
+            backgroundColorPanel.Name = "backgroundColorPanel";
+            backgroundColorPanel.RectColor = Color.FromArgb(18, 58, 92);
+            backgroundColorPanel.ShowText = false;
+            backgroundColorPanel.Size = new Size(405, 175);
+            backgroundColorPanel.Style = Sunny.UI.UIStyle.Black;
+            backgroundColorPanel.TabIndex = 13;
+            backgroundColorPanel.Text = "Background Color Options";
+            backgroundColorPanel.TextAlignment = ContentAlignment.MiddleCenter;
+            backgroundColorPanel.TitleColor = Color.FromArgb(21, 21, 21);
+            backgroundColorPanel.Visible = false;
+            // 
+            // backgroundOldColorPanel
+            // 
+            backgroundOldColorPanel.FillColor = Color.FromArgb(24, 24, 24);
+            backgroundOldColorPanel.FillColor2 = Color.FromArgb(24, 24, 24);
+            backgroundOldColorPanel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backgroundOldColorPanel.ForeColor = Color.White;
+            backgroundOldColorPanel.Location = new Point(160, 54);
+            backgroundOldColorPanel.Margin = new Padding(4, 5, 4, 5);
+            backgroundOldColorPanel.MinimumSize = new Size(1, 1);
+            backgroundOldColorPanel.Name = "backgroundOldColorPanel";
+            backgroundOldColorPanel.RectColor = Color.FromArgb(18, 58, 92);
+            backgroundOldColorPanel.Size = new Size(236, 42);
+            backgroundOldColorPanel.Style = Sunny.UI.UIStyle.Black;
+            backgroundOldColorPanel.TabIndex = 4;
+            backgroundOldColorPanel.Text = null;
+            backgroundOldColorPanel.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // backgroundColorPicker
+            // 
+            backgroundColorPicker.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            backgroundColorPicker.FillColor = Color.White;
+            backgroundColorPicker.FillColor2 = Color.FromArgb(24, 24, 24);
+            backgroundColorPicker.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backgroundColorPicker.Location = new Point(160, 113);
+            backgroundColorPicker.Margin = new Padding(4, 5, 4, 5);
+            backgroundColorPicker.MinimumSize = new Size(63, 0);
+            backgroundColorPicker.Name = "backgroundColorPicker";
+            backgroundColorPicker.Padding = new Padding(0, 0, 30, 2);
+            backgroundColorPicker.RectColor = Color.FromArgb(18, 58, 92);
+            backgroundColorPicker.Size = new Size(236, 44);
+            backgroundColorPicker.Style = Sunny.UI.UIStyle.Black;
+            backgroundColorPicker.TabIndex = 3;
+            backgroundColorPicker.TextAlignment = ContentAlignment.MiddleLeft;
+            backgroundColorPicker.Watermark = "";
+            backgroundColorPicker.ValueChanged += backgroundColorPicker_ValueChanged;
+            // 
+            // uiLabel4
+            // 
+            uiLabel4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiLabel4.ForeColor = Color.White;
+            uiLabel4.Location = new Point(13, 116);
+            uiLabel4.Name = "uiLabel4";
+            uiLabel4.Size = new Size(135, 34);
+            uiLabel4.Style = Sunny.UI.UIStyle.Black;
+            uiLabel4.TabIndex = 2;
+            uiLabel4.Text = "New Color:";
+            uiLabel4.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel5
+            // 
+            uiLabel5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiLabel5.ForeColor = Color.White;
+            uiLabel5.Location = new Point(14, 57);
+            uiLabel5.Name = "uiLabel5";
+            uiLabel5.Size = new Size(135, 34);
+            uiLabel5.Style = Sunny.UI.UIStyle.Black;
+            uiLabel5.TabIndex = 0;
+            uiLabel5.Text = "Old Color:";
+            uiLabel5.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1032, 1177);
+            ClientSize = new Size(1064, 1229);
             ControlBoxFillHoverColor = Color.FromArgb(70, 70, 70);
+            Controls.Add(backgroundColorPanel);
             Controls.Add(uiTitlePanel2);
             Controls.Add(uiTitlePanel4);
             Controls.Add(uiTitlePanel3);
@@ -397,6 +488,7 @@
             uiTitlePanel3.ResumeLayout(false);
             uiTitlePanel4.ResumeLayout(false);
             uiTitlePanel2.ResumeLayout(false);
+            backgroundColorPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -414,10 +506,15 @@
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel previewNewLabel;
         private Sunny.UI.UILabel previewOldLabel;
-        private Sunny.UI.UIPanel oldColorPicker;
+        private Sunny.UI.UIPanel oldColorPanel;
         private Sunny.UI.UINumPadTextBox colorPercentageTextBox;
         private Sunny.UI.UITitlePanel uiTitlePanel2;
         private Sunny.UI.UIButton generateColorsButton;
         private Sunny.UI.UILabel uiLabel3;
+        private Sunny.UI.UITitlePanel backgroundColorPanel;
+        private Sunny.UI.UIPanel backgroundOldColorPanel;
+        private Sunny.UI.UIColorPicker backgroundColorPicker;
+        private Sunny.UI.UILabel uiLabel4;
+        private Sunny.UI.UILabel uiLabel5;
     }
 }
