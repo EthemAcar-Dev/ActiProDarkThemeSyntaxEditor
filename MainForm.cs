@@ -1,8 +1,6 @@
 using DarkThemeSyntax.Resources;
 using Sunny.UI;
-using Sunny.UI.Win32;
 using System.Xml.Serialization;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace DarkThemeSyntax
 {
