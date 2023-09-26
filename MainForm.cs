@@ -144,7 +144,7 @@ namespace DarkThemeSyntax
                         OldColor = backHexColor
                     };
                 }
-                items.Add(itemToAdd); 
+                items.Add(itemToAdd);
             }
             else
             {
@@ -185,6 +185,8 @@ namespace DarkThemeSyntax
             if (item.Background == null)
             {
                 backgroundColorPanel.Visible = false;
+                previewOldLabel.BackColor = Color.Transparent;
+                previewNewLabel.BackColor = Color.Transparent;
             }
             else
             {
@@ -243,5 +245,7 @@ namespace DarkThemeSyntax
             item.Background.NewColor = backgroundColorPicker.Value;
             generateVsSettings();
         }
+
+        
     }
 }
