@@ -319,7 +319,7 @@
             colorPercentageTextBox.Size = new Size(92, 44);
             colorPercentageTextBox.Style = Sunny.UI.UIStyle.Black;
             colorPercentageTextBox.TabIndex = 11;
-            colorPercentageTextBox.Text = "70";
+            colorPercentageTextBox.Text = "50";
             colorPercentageTextBox.TextAlignment = ContentAlignment.MiddleLeft;
             colorPercentageTextBox.Watermark = "";
             // 
