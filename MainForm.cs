@@ -96,15 +96,19 @@ namespace DarkThemeSyntax
             //return the string in reverse order as VS expects it
             return $"0x00{color.B.ToString("X2")}{color.G.ToString("X2")}{color.R.ToString("X2")}";
         }
+        private bool inBounds(int index, string[] array)
+        {
+            return (index >= 0) && (index < array.Length);
+        }
         private void DefaultStyleToHex(string defaulStyle, string key)
         {
             if (defaulStyle.Contains(","))
             {
                 string[] splitted = defaulStyle.Split(',');
                 string foreColor = splitted[0];
-                string isBold = splitted[1];
-                string isItalic = splitted[2];
-                string backColor = splitted[3];
+                string isBold = inBounds(1, splitted) ? splitted[1] : "";
+                string isItalic = inBounds(2, splitted) ? splitted[2] : "";
+                string backColor = inBounds(3, splitted) ? splitted[3] : "";
                 Color foreHexColor = Color.Transparent;
                 Color backHexColor = Color.Transparent;
                 bool boolIsBold = false;
@@ -112,6 +116,10 @@ namespace DarkThemeSyntax
                 if (!string.IsNullOrEmpty(foreColor))
                 {
                     foreHexColor = HexToColor(foreColor);
+                }
+                else
+                {
+                    return;
                 }
                 if (!string.IsNullOrEmpty(isBold))
                 {
